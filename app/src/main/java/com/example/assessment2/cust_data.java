@@ -37,7 +37,7 @@ public class cust_data extends AppCompatActivity {
             postV = 0;
         }
 
-        //if >2999, customer lives in VIC, if < 4000, cust does not live in VIC
+        //if >2999 and < 4000, customer lives in VIC. else does not
         if (postV > 2999 && postV < 4000) {
             custArea.setText(getIntent().getStringExtra("name") + " lives in VIC");
         } else {
