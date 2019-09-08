@@ -34,19 +34,18 @@ public class cust_data extends AppCompatActivity {
 
         try {
             postV = Integer.parseInt(postCodeValue.trim());
-        }
-        catch (NumberFormatException e)
-        {
+        } catch (NumberFormatException e) {
             postV = 0;
         }
 
         //if >2999, customer lives in VIC, if < 4000, cust does not live in VIC
-        if (postV > 2999 && postV < 4000){
+        if (postV > 2999 && postV < 4000) {
             custArea.setText(getIntent().getStringExtra("name") + " lives in VIC");
         } else {
             custArea.setText(getIntent().getStringExtra("name") + " does not live in VIC");
         }
     }
+
     //previous screen activity button
     public void previousActBtn(View view) {
         Intent previousIntent = new Intent(cust_data.this, MainActivity.class);
